@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civil Service Exam Pretest 1 - Analytical Ability</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #f8f9fa;
+    }
+    h1, h2, h3 {
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f1f1f1;
+      border-radius: 8px;
+    }
+    .question strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-left: 20px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .result, .explanation {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .result {
+      background: #e2f0d9;
+    }
+    .explanation {
+      background: #fff3cd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PRETEST</h1>
+    <h2>CIVIL SERVICE EXAM PRETEST 1</h2>
+    <h3>SECTION 2: ANALYTICAL ABILITY - PART 4: IDENTIFYING ASSUMPTIONS</h3>
+    <p><strong>Created by:</strong> CSE Learning Essentials</p>
+    <p><strong>Passing Score:</strong> 8</p>
+    <hr>
+    <p><strong>Directions:</strong> Each item in this section consists of a statement or a passage followed by several assumptions. Determine the best assumption that can be logically made from the given statement or passage.</p>
+
+    <form id="quizForm">
+      <!-- Questions will be injected here -->
+    </form>
+
+    <button type="button" onclick="checkAnswers()">Submit Answers</button>
+    <div id="score"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        q: "A child stands at the edge of a swimming pool, clinging to the side and crying. The child refuses to go in, trembling. The parent walks over, shows the child a properly fitted life jacket, helps the child put it on, and the child immediately relaxes and lets go of the edge. What is the best assumption?",
+        options: ["The child was afraid of the water.", "The child wanted to play later, not now.", "The child was angry at the parent.", "The child didn't like the pool's temperature.", "The child was pretending to cry for attention."],
+        answer: 0,
+        explanation: "The child calmed after wearing the life jacket, which suggests fear of water. Other choices commit fallacies like non sequitur, false cause, or appeal to ignorance."
+      },
+      {
+        q: "Reading books regularly improves knowledge and critical thinking skills.",
+        options: ["Only Assumption I follows", "Both Assumptions I & III follow", "Assumptions I, II & III follow", "Only Assumption III follows", "None of the Above"],
+        answer: 1,
+        explanation: "Assumptions I & III follow; II is a hasty generalization since people may think critically through other means."
+      },
+      {
+        q: "Education is a key factor in achieving national progress.",
+        options: ["Only Assumption I follows", "Only Assumption II follows", "Only Assumption III follows", "Assumption II and III follow", "None of the Above"],
+        answer: 3,
+        explanation: "II and III follow logically. I does not, since other factors may also contribute to progress."
+      },
+      {
+        q: "Discipline is necessary for success in any field.",
+        options: ["Only Assumption I follows", "Only Assumption II follows", "Only Assumption III follows", "Assumptions II & III follow", "None of the Above"],
+        answer: 3,
+        explanation: "Assumptions II and III follow; I is a hasty generalization."
+      },
+      {
+        q: "The Department of Education has announced that the annual regional quiz bee will not be held this year due to organizational concerns.",
+        options: ["The quiz bee is cancelled because students are not interested in joining.", "The cancellation is related to scheduling and management difficulties.", "The Department of Education has permanently abolished the quiz bee competition.", "The teachers refused to prepare their students for the competition.", "The quiz bee was replaced by a sports festival instead."],
+        answer: 1,
+        explanation: "Organizational concerns mean scheduling/management problems. Other options are unsupported assumptions."
+      },
+      {
+        q: "Environmental conservation is important because it helps protect biodiversity, reduces pollution, and ensures resources for future generations.",
+        options: ["Protecting biodiversity, reducing pollution, and ensuring resources are essential parts of conservation.", "Future generations will not survive without conservation efforts.", "Pollution is the only threat to the environment.", "Conservation means completely stopping the use of natural resources.", "Conserving the environment is the only responsibility of the government."],
+        answer: 0,
+        explanation: "The statement directly supports A; others are fallacies or misrepresentations."
+      },
+      {
+        q: "Increasing the number of renewable energy projects in the Philippines is the best way to reduce dependence on imported fossil fuels, since it will provide cleaner and more sustainable sources of power.",
+        options: ["Filipinos will use renewable energy if it becomes more available and reliable.", "Imported fossil fuels are the only source of the Philippines’ energy supply.", "Renewable energy alone can completely solve the country’s energy problems.", "Power shortages in the Philippines are caused mainly by mismanagement of resources.", "Building more coal power plants is less effective than expanding renewable energy projects."],
+        answer: 0,
+        explanation: "The statement assumes people will adopt renewables if they are available and reliable."
+      },
+      {
+        q: "Establishing independent anti-corruption bodies is one of the best ways to improve accountability in government, since it allows fair investigation and monitoring of public officials.",
+        options: ["Public officials are incapable of monitoring themselves.", "Corruption in government is caused mainly by low salaries of officials.", "Independent bodies can completely eliminate corruption in the country.", "Citizens have no role in ensuring government accountability.", "Independent anti-corruption bodies are more effective in ensuring accountability than internal monitoring"],
+        answer: 4,
+        explanation: "The assumption is that independent bodies are more effective than internal monitoring."
+      },
+      {
+        q: "Implementing comprehensive flood control projects in the Philippines is the best way to minimize damage during typhoon season, since it can reduce risks to lives and properties.",
+        options: ["Floods in the Philippines are caused mainly by heavy rainfall during typhoons.", "People in flood-prone areas are often reluctant to leave their communities.", "Flood control projects are expected to fully solve the problem of flooding.", "The government prioritizes flood control projects over other development needs.", "Flood control projects are considered more effective than emergency response measures."],
+        answer: 4,
+        explanation: "The assumption is that prevention (flood control) is more effective than relying only on response."
+      },
+      {
+        q: "Strengthening public awareness campaigns against online phishing is the best way to protect internet users, since it helps them recognize and avoid fraudulent schemes.",
+        options: ["Online phishing attacks are a major threat to the safety of internet users.", "Many people fall victim to phishing because they lack proper awareness.", "Awareness campaigns can completely eliminate the risk of online phishing.", "The government invests more in cybersecurity awareness than in other programs.", "Awareness campaigns are considered more effective than relying only on technical defenses."],
+        answer: 4,
+        explanation: "The statement assumes awareness is more effective than technical defenses alone."
+      }
+    ];
+
+    const form = document.getElementById("quizForm");
+
+    questions.forEach((item, index) => {
+      const div = document.createElement("div");
+      div.className = "question";
+      div.innerHTML = `<strong>Q${index + 1}.</strong> ${item.q}`;
+      item.options.forEach((opt, i) => {
+        div.innerHTML += `
+          <label>
+            <input type="radio" name="q${index}" value="${i}">
+            ${String.fromCharCode(65+i)}) ${opt}
+          </label>
+        `;
+      });
+      form.appendChild(div);
+    });
+
+    function checkAnswers() {
+      let score = 0;
+      const resultsDiv = document.getElementById("score");
+      resultsDiv.innerHTML = "";
+
+      questions.forEach((item, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        const div = document.createElement("div");
+
+        if (selected && parseInt(selected.value) === item.answer) {
+          score++;
+          div.className = "result";
+          div.innerHTML = `<strong>Q${index + 1}:</strong> Correct! ✅ <br> <em>${item.explanation}</em>`;
+        } else {
+          div.className = "explanation";
+          div.innerHTML = `<strong>Q${index + 1}:</strong> Incorrect ❌ <br> Correct Answer: ${String.fromCharCode(65+item.answer)}) ${item.options[item.answer]} <br><em>${item.explanation}</em>`;
+        }
+        resultsDiv.appendChild(div);
+      });
+
+      resultsDiv.innerHTML = `<h3>Your Score: ${score} / ${questions.length}</h3>` + resultsDiv.innerHTML;
+      if (score >= 8) {
+        resultsDiv.innerHTML += `<p><strong>Result:</strong> PASSED 🎉</p>`;
+      } else {
+        resultsDiv.innerHTML += `<p><strong>Result:</strong> FAILED ❌</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
